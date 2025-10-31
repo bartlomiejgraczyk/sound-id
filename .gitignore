@@ -128,8 +128,6 @@ log/
 ### Temporary Files ###
 *.tmp
 *.temp
-*.swp
-*~.nib
 *.bak
 *.old
 
