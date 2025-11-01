@@ -110,10 +110,8 @@ $RECYCLE.BIN/
 hs_err_pid*
 replay_pid*
 
-# Package Files - but keep wrapper jars
+# Package Files
 *.jar
-!gradle/wrapper/gradle-wrapper.jar
-!.mvn/wrapper/maven-wrapper.jar
 
 ### Kotlin ###
 .kotlin/
@@ -143,3 +141,5 @@ application-*.yml
 *.sqlite
 *.sqlite3
 *.h2.db
+# Ignore Gradle build output directory
+build
