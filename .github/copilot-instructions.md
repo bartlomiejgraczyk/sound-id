@@ -53,7 +53,7 @@ When reviewing any PR, meticulously analyze the following aspects:
 ### D. Performance & Security
 * **N+1 Queries:** Do database operations, especially within loops, introduce potential N+1 query problems? Check JPA and Spring Data query methods.
 * **Error Handling:** Are exceptions handled gracefully? Is a global `ExceptionHandler` (`@RestControllerAdvice`) used for HTTP responses?
-* **Validation:** Are all inputs (DTOs, path variables) being validated (e.g., using `jakarta.validation.constraints`)?
+* **Validation:** Are all inputs (DTOs, path variables) being validated (e.g., using `jakarta.validation.constraints` for Spring Boot 3.x+/Jakarta EE 9+, or `javax.validation.constraints` for earlier versions)?
 * **Security:** Are there obvious vulnerabilities (e.g., logging sensitive data, missing authorization on new endpoints, potential for injection)?
 
 ---
