@@ -1,0 +1,13 @@
+[versions]
+spring-boot = "3.5.7"
+kotlin = "2.2.21"
+integration-test = "2.2.5"
+
+[libraries]
+spring-boot-dependencies = { group = "org.springframework.boot", name = "spring-boot-dependencies", version.ref = "spring-boot" }
+spring-boot-starter-web = { group = "org.springframework.boot", name = "spring-boot-starter-web" }
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-spring = { id = "org.jetbrains.kotlin.plugin.spring", version.ref = "kotlin" }
+integration-test = { id = "com.coditory.integration-test", version.ref = "integration-test" }
