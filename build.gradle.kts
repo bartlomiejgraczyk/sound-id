@@ -16,3 +16,9 @@ dependencies {
 application {
     mainClass.set("com.soundid.SoundIdApplicationKt")
 }
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}

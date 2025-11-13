@@ -8,5 +8,6 @@
  */
 
 rootProject.name = "sound-id"
-include("ingestion")
-include("recognition")
+include("soundid-domain")
+
+include("soundid-application")
