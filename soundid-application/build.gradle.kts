@@ -2,6 +2,7 @@ plugins {
     id("java")
     groovy
     alias(libs.plugins.integration.test)
+    `java-test-fixtures`
 }
 
 repositories {
@@ -11,8 +12,10 @@ repositories {
 dependencies {
     implementation(project(":soundid-domain"))
     implementation(libs.jspecify)
+    compileOnly(libs.lombok)
     testImplementation(libs.groovy)
     testImplementation(libs.spock.core)
+    testImplementation(testFixtures(project(":soundid-domain")))
 }
 
 tasks.test {
