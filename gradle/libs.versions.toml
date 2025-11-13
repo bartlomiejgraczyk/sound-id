@@ -9,7 +9,9 @@ lombok = "1.18.42"
 
 [libraries]
 spring-boot-dependencies = { group = "org.springframework.boot", name = "spring-boot-dependencies", version.ref = "spring-boot" }
-spring-boot-starter-web = { group = "org.springframework.boot", name = "spring-boot-starter-web" }
+spring-boot = { group = "org.springframework.boot", name = "spring-boot" }
+spring-boot-autoconfigure = { group = "org.springframework.boot", name = "spring-boot-autoconfigure" }
+spring-context = { group = "org.springframework", name = "spring-context" }
 jspecify = { group = "org.jspecify", name = "jspecify", version.ref = "jspecify" }
 groovy = { group = "org.apache.groovy", name = "groovy", version.ref = "groovy" }
 spock-core = { group = "org.spockframework", name = "spock-core", version.ref = "spock" }

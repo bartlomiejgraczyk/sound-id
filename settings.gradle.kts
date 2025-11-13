@@ -11,3 +11,4 @@ rootProject.name = "sound-id"
 include("soundid-domain")
 
 include("soundid-application")
+include("soundid-infrastructure")
