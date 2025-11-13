@@ -13,6 +13,7 @@ dependencies {
     implementation(project(":soundid-domain"))
     implementation(libs.jspecify)
     compileOnly(libs.lombok)
+    annotationProcessor(libs.lombok)
     testImplementation(libs.groovy)
     testImplementation(libs.spock.core)
     testImplementation(testFixtures(project(":soundid-domain")))
