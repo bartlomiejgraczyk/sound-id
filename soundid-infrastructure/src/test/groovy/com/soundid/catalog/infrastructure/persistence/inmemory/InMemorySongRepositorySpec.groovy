@@ -8,7 +8,6 @@ import static com.soundid.catalog.domain.model.song.SongAssertions.assertThat
 import static com.soundid.catalog.domain.model.song.SongBuilder.aSong
 
 class InMemorySongRepositorySpec extends Specification {
-
     private static final def SONG_ID_1 = "SONG_ID_1"
     private static final def SONG_TITLE_1 = "Test Song Title 1"
     private static final def SONG_TITLE_2 = "Test Song Title 2"
