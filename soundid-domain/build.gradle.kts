@@ -1,5 +1,5 @@
 plugins {
-    id("java")
+    id("java-library")
     groovy
     alias(libs.plugins.integration.test)
     `java-test-fixtures`
@@ -10,7 +10,7 @@ repositories {
 }
 
 dependencies {
-    implementation(libs.jspecify)
+    api(libs.jspecify)
     testImplementation(libs.groovy)
     testImplementation(libs.spock.core)
     testFixturesImplementation(libs.groovy)

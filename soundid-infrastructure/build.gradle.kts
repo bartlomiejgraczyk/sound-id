@@ -1,5 +1,5 @@
 plugins {
-    id("java")
+    id("java-library")
     groovy
     alias(libs.plugins.integration.test)
     `java-test-fixtures`
@@ -13,7 +13,7 @@ dependencies {
     implementation(project(":soundid-domain"))
     implementation(platform(libs.spring.boot.dependencies))
     implementation(libs.spring.context)
-    implementation(libs.jspecify)
+    api(libs.jspecify)
     testImplementation(libs.groovy)
     testImplementation(libs.spock.core)
     testImplementation(testFixtures(project(":soundid-domain")))
