@@ -2,10 +2,8 @@ plugins {
     id("java")
     groovy
     alias(libs.plugins.integration.test)
+    `java-test-fixtures`
 }
-
-group = "com.soundid"
-version = "unspecified"
 
 repositories {
     mavenCentral()
@@ -18,6 +16,7 @@ dependencies {
     implementation(libs.jspecify)
     testImplementation(libs.groovy)
     testImplementation(libs.spock.core)
+    testImplementation(testFixtures(project(":soundid-domain")))
 }
 
 tasks.test {
