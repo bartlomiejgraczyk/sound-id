@@ -15,6 +15,8 @@ public class InMemoryFingerprintRepository implements FingerprintRepository {
 
     @Override
     public void saveAll(@NonNull SongId songId, @NonNull Set<Fingerprint> fingerprints) {
+        Set<Fingerprint> immutableFingerprints = Set.copyOf(fingerprints);
+        database.put(songId, immutableFingerprints);
     }
 
     public Set<Fingerprint> findBySongId(@NonNull SongId songId) {
