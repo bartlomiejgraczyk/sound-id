@@ -28,8 +28,3 @@ java {
         languageVersion = JavaLanguageVersion.of(21)
     }
 }
-
-tasks.withType<GroovyCompile> {
-    sourceCompatibility = "21"
-    targetCompatibility = "21"
-}
