@@ -66,6 +66,6 @@ class InMemoryFingerprintRepositorySpec extends Specification {
     }
 
     private Set<Fingerprint> findBySongId(String songId) {
-        repository.findBySongId(new SongId(songId))
+        return repository.findBySongId(new SongId(songId))
     }
 }

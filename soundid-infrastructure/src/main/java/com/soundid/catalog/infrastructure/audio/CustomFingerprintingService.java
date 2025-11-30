@@ -4,7 +4,6 @@ import com.soundid.catalog.domain.model.fingerprint.AudioSample;
 import com.soundid.catalog.domain.model.fingerprint.Fingerprint;
 import com.soundid.catalog.domain.service.FingerprintingService;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.Set;
 import org.jspecify.annotations.NonNull;
 
@@ -29,6 +28,6 @@ public class CustomFingerprintingService implements FingerprintingService {
         // 5. Return the real Set<Fingerprint>
         //
         // --- END OF REAL ALGORITHM ---
-        return Collections.emptySet();
+        return Set.of();
     }
 }

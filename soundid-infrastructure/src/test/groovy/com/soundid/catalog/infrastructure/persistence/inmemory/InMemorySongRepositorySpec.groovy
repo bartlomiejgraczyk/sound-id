@@ -37,9 +37,6 @@ class InMemorySongRepositorySpec extends Specification {
     }
 
     def "should return empty optional if song is not found"() {
-        given:
-        def randomId = SongId.generate()
-
         when:
         def foundSongOptional = repository.findById(new SongId(SONG_ID_1))
 
