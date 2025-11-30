@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class SongRepositoryConfiguration {
     @Bean
-    SongRepository songRepository() {
+    public SongRepository songRepository() {
         return new InMemorySongRepository();
     }
 }

@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class FingerprintingAdapterConfiguration {
     @Bean
-    FingerprintingService fingerprintingService() {
-        return new CustomFingerprintingService();
+    public FingerprintingService fingerprintingService() {
+        return new StubFingerprintingService();
     }
 }

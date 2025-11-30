@@ -26,7 +26,7 @@ public class IngestSongUseCase {
             command.audioSample()
         );
         songRepository.save(song);
-        fingerprintRepository.saveAll(song.id(), fingerprints);
+        fingerprintRepository.saveAll(song.id(), fingerprints); // TODO: perform both saves in a transaction
         return song.id();
     }
 }

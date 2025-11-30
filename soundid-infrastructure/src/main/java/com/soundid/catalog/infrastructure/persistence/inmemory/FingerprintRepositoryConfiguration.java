@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class FingerprintRepositoryConfiguration {
     @Bean
-    FingerprintRepository fingerprintRepository() {
+    public FingerprintRepository fingerprintRepository() {
         return new InMemoryFingerprintRepository();
     }
 }

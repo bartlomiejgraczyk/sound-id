@@ -56,7 +56,8 @@ class IngestSongUseCaseSpec extends Specification {
         }
 
         and:
-        resultSongId == savedSong.id()
+        assert savedSong.id() == resultSongId
+        assert savedSong.title() == SONG_TITLE
     }
 
     def "should reject command with invalid title: #scenario"() {

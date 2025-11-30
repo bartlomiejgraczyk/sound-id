@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.Set;
 import org.jspecify.annotations.NonNull;
 
-public class CustomFingerprintingService implements FingerprintingService {
+public class StubFingerprintingService implements FingerprintingService {
     private static final byte[] DUMMY_AUDIO_BYTES = new byte[] { 10, 20, 30, 40, 50 };
     private static final Set<Fingerprint> DUMMY_FINGERPRINTS = Set.of(
         new Fingerprint(123456789L, 150),

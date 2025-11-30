@@ -5,14 +5,14 @@ import spock.lang.Specification
 
 import static com.soundid.catalog.domain.model.fingerprint.AudioSampleBuilder.anAudioSample
 
-class CustomFingerprintingServiceSpec extends Specification {
+class StubFingerprintingServiceSpec extends Specification {
 
     private static final def DUMMY_AUDIO_BYTES = [10, 20, 30, 40, 50] as byte[]
     private static final def AUDIO_WAV_CONTENT_TYPE = "audio/wav"
 
-    def service = new CustomFingerprintingService()
+    def service = new StubFingerprintingService()
 
-    def "should return correct fingerprints for a known dummy audio sample"() {
+    def "should return dummy fingerprints for a known dummy audio sample"() {
         given:
         def expectedFingerprints = Set.of(
                 new Fingerprint(123456789L, 150),

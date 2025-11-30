@@ -5,7 +5,7 @@ import org.jspecify.annotations.NonNull;
 public record Song(
     @NonNull SongId id,
     @NonNull String title
-    ) {
+) {
     public Song {
         if (id == null) {
             throw new IllegalArgumentException("SongId cannot be null");

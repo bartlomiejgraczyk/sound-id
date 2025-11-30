@@ -57,8 +57,6 @@ class InMemoryFingerprintRepositorySpec extends Specification {
 
         then:
         foundSet == newFingerprints
-        foundSet.size() == 2
-        foundSet.containsAll(newFingerprints)
     }
 
     private void saveAll(String songId, Set<Fingerprint> fingerprints) {
