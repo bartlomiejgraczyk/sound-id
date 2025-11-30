@@ -2,10 +2,20 @@
 spring-boot = "4.0.0"
 kotlin = "2.2.21"
 integration-test = "2.2.5"
+jspecify = "1.0.0"
+groovy = "4.0.29"
+spock = "2.3-groovy-4.0"
+lombok = "1.18.42"
 
 [libraries]
 spring-boot-dependencies = { group = "org.springframework.boot", name = "spring-boot-dependencies", version.ref = "spring-boot" }
-spring-boot-starter-web = { group = "org.springframework.boot", name = "spring-boot-starter-web" }
+spring-boot = { group = "org.springframework.boot", name = "spring-boot" }
+spring-boot-autoconfigure = { group = "org.springframework.boot", name = "spring-boot-autoconfigure" }
+spring-context = { group = "org.springframework", name = "spring-context" }
+jspecify = { group = "org.jspecify", name = "jspecify", version.ref = "jspecify" }
+groovy = { group = "org.apache.groovy", name = "groovy", version.ref = "groovy" }
+spock-core = { group = "org.spockframework", name = "spock-core", version.ref = "spock" }
+lombok = { module = "org.projectlombok:lombok", version.ref = "lombok" }
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
