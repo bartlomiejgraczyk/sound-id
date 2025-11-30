@@ -59,6 +59,40 @@ class IngestSongUseCaseSpec extends Specification {
         resultSongId == savedSong.id()
     }
 
+    def "should reject command with invalid title: #scenario"() {
+        given:
+        def audioSample = anAudioSample()
+                .withData(AUDIO_SAMPLE_BYTES)
+                .withContentType(AUDIO_WAV_CONTENT_TYPE)
+                .build()
+
+        when:
+        handle(anIngestSongCommand()
+                .withTitle(title)
+                .withAudioSample(audioSample)
+        )
+
+        then:
+        thrown IllegalArgumentException
+
+        where:
+        scenario      | title
+        "null title"  | null
+        "empty title" | ""
+        "blank title" | "   "
+    }
+
+    def "should reject command with null audio sample"() {
+        when:
+        handle(anIngestSongCommand()
+                .withTitle(SONG_TITLE)
+                .withAudioSample(null)
+        )
+
+        then:
+        thrown IllegalArgumentException
+    }
+
     private SongId handle(IngestSongCommandBuilder command) {
         return useCase.handle(command.build())
     }
