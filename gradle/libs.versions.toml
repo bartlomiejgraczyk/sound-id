@@ -1,5 +1,5 @@
 [versions]
-spring-boot = "3.5.7"
+spring-boot = "4.0.1"
 integration-test = "2.2.5"
 jspecify = "1.0.0"
 groovy = "4.0.29"
