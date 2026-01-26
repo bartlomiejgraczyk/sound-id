@@ -2,7 +2,7 @@
 spring-boot = "3.5.7"
 integration-test = "2.2.5"
 jspecify = "1.0.0"
-groovy = "4.0.29"
+groovy = "5.0.4"
 spock = "2.3-groovy-4.0"
 lombok = "1.18.42"
 palantir-git-version = "4.2.0"
